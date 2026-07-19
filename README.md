@@ -1,10 +1,9 @@
 # 📤 Google Drive Upload Telegram Bot
 
-[#-google-drive-upload-telegram-bot](#-google-drive-upload-telegram-bot)
+
 
 ### Send a file to your Telegram bot and watch it land straight in Google Drive — a two-service Python stack built with FastAPI, Google OAuth, and MongoDB
 
-[#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--a-two-service-python-stack-built-with-fastapi-google-oauth-and-mongodb](#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--a-two-service-python-stack-built-with-fastapi-google-oauth-and-mongodb)
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=FFD43B)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -23,7 +22,7 @@
 
 ## ✨ Key Features
 
-[#-key-features](#-key-features)
+[#-key-features]
 
 | Feature                          | Description                                                                                     |
 | --------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -40,7 +39,6 @@
 
 ## 🏗️ Architecture & Workflow
 
-[#️-architecture--workflow](#️-architecture--workflow)
 
 The project is split into **two independent Python services** that communicate over HTTP, secured with an HMAC signature:
 
@@ -73,7 +71,7 @@ Each service lives in its own folder, ships its own `requirements.txt` and `.env
 
 ## 🛠️ Tech Stack
 
-[#️-tech-stack](#️-tech-stack)
+[#️-tech-stack]
 
 - **Core Language** — Python (no Node.js/JavaScript involved anywhere in the stack)
 - **Bot Service** — Telegram Bot API, run via `python main.py`
@@ -86,7 +84,7 @@ Each service lives in its own folder, ships its own `requirements.txt` and `.env
 
 ## 📦 Dependencies
 
-[#-dependencies](#-dependencies)
+[#-dependencies]
 
 Each service manages its **own** `requirements.txt`. Install them separately from inside each folder:
 
@@ -114,11 +112,11 @@ pip install -r requirements.txt
 
 ## 🚀 Installation & Setup
 
-[#-installation--setup](#-installation--setup)
+[#-installation--setup]
 
 ### 1️⃣ Fork the Repository
 
-[#1️⃣-fork-the-repository](#1️⃣-fork-the-repository)
+[#1️⃣-fork-the-repository]
 
 Fork this repository to your own GitHub account using the **Fork** button at the top of the page, then clone your fork locally:
 
@@ -129,7 +127,7 @@ cd Google-Drive-Upload-Telegram-Bot
 
 ### 2️⃣ Split the Project into Two Services
 
-[#2️⃣-split-the-project-into-two-services](#2️⃣-split-the-project-into-two-services)
+[#2️⃣-split-the-project-into-two-services]
 
 This project is designed to run as **two separate services**, not a single monolith:
 
@@ -140,7 +138,7 @@ Deploy each folder as its own repository/service (e.g., push each to its own hos
 
 ### 3️⃣ Set Up the Backend
 
-[#3️⃣-set-up-the-backend](#3️⃣-set-up-the-backend)
+[#3️⃣-set-up-the-backend]
 
 ```bash
 cd backend
@@ -167,7 +165,7 @@ uvicorn main:app --reload
 
 ### 4️⃣ Set Up the Bot (Frontend)
 
-[#4️⃣-set-up-the-bot-frontend](#4️⃣-set-up-the-bot-frontend)
+[#4️⃣-set-up-the-bot-frontend]
 
 ```bash
 cd bot
@@ -198,13 +196,13 @@ Once both services are running, send a file to your bot on Telegram — it will 
 
 ## 🔑 Environment Variables
 
-[#-environment-variables](#-environment-variables)
+[#-environment-variables]
 
 Each service has its **own** `.env`, created from its own `.env.example`. Keep the two separate — never merge them into one file.
 
 ### `bot/.env.example` — Bot (Frontend)
 
-[#botenvexample--bot-frontend](#botenvexample--bot-frontend)
+[#botenvexample--bot-frontend]
 
 ```env
 # Telegram Bot Configuration
@@ -221,7 +219,7 @@ UPLOAD_TIME=300      # Upload request timeout in seconds
 
 ### `backend/.env.example` — Backend
 
-[#backendenvexample--backend](#backendenvexample--backend)
+[#backendenvexample--backend]
 
 ```env
 # Google OAuth Configuration
@@ -245,7 +243,7 @@ BOT_HMAC_SECRET=your_bot_hmac_secret_here
 
 ### Where to obtain each credential:
 
-[#where-to-obtain-each-credential](#where-to-obtain-each-credential)
+[#where-to-obtain-each-credential]
 
 | Variable                                          | Source                                                                                  |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -262,7 +260,7 @@ BOT_HMAC_SECRET=your_bot_hmac_secret_here
 
 ## 📋 Guidelines
 
-[#-guidelines](#-guidelines)
+[#-guidelines]
 
 Warning
 
