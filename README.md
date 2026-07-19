@@ -20,6 +20,7 @@
 
 ---
 
+**🔗 [Try the live sample bot on Telegram](https://t.me/Gdrive_testbot)** — test the upload flow yourself before setting up your own instance.
 ## ✨ Key Features
 
 [#-key-features]
