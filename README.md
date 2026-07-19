@@ -1,292 +1,327 @@
 # 📤 Google Drive Upload Telegram Bot
- 
+
 [#-google-drive-upload-telegram-bot](#-google-drive-upload-telegram-bot)
- 
-### Send a file to your Telegram bot and watch it land straight in Google Drive — powered by a FastAPI backend, a dedicated bot service, and a lightweight frontend
- 
-[#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--powered-by-a-fastapi-backend-a-dedicated-bot-service-and-a-lightweight-frontend](#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--powered-by-a-fastapi-backend-a-dedicated-bot-service-and-a-lightweight-frontend)
- 
+
+### Send a file to your Telegram bot and watch it land straight in Google Drive — a two-service Python stack built with FastAPI, Google OAuth, and MongoDB
+
+[#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--a-two-service-python-stack-built-with-fastapi-google-oauth-and-mongodb](#send-a-file-to-your-telegram-bot-and-watch-it-land-straight-in-google-drive--a-two-service-python-stack-built-with-fastapi-google-oauth-and-mongodb)
+
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=FFD43B)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Telegram Bot API](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![Google OAuth](https://img.shields.io/badge/Google-OAuth%202.0-4285F4?style=flat-square&logo=google&logoColor=white)
 ![Google Drive API](https://img.shields.io/badge/Google%20Drive-API-4285F4?style=flat-square&logo=googledrive&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![python-dotenv](https://img.shields.io/badge/python--dotenv-Env%20Config-ECD53F?style=flat-square&logo=dotenv&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
- 
-> A three-part automation stack that receives a file from a Telegram chat, streams it through a FastAPI backend,
-> and uploads it directly to **Google Drive** — with a customizable upload limit and no manual handling required.
- 
+
+> A two-service automation stack — a Telegram-facing **Bot** and an OAuth-aware **Backend** — that authenticates
+> a user's Google account, receives a file from a Telegram chat, and uploads it directly to **Google Drive**,
+> with a fully configurable upload limit and request timeout. Pure Python. No Node.js involved.
+
 ---
- 
+
 ## ✨ Key Features
- 
+
 [#-key-features](#-key-features)
- 
-| Feature                          | Description                                                                                   |
-| --------------------------------- | ----------------------------------------------------------------------------------------------- |
-| 🤖 **Telegram File Intake**       | Users send any file directly to the bot in a Telegram chat — no external app required           |
-| ⚡ **FastAPI Backend**             | A lightweight, high-performance Python backend handles routing, validation, and upload requests |
-| ☁️ **Direct Google Drive Upload** | Files are streamed straight to a configured Google Drive folder via the Google Drive API        |
-| 📏 **Customizable Upload Limit**  | The maximum file size accepted by the bot is configurable from a single `.env` variable          |
-| 🧩 **Decoupled Components**       | Frontend, Bot, and Backend are independent services that can be deployed and scaled separately   |
-| 🔐 **Secure Config Management**   | All credentials and secrets are managed via `.env` — never hardcoded into source files           |
- 
+
+| Feature                          | Description                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- |
+| 🤖 **Telegram File Intake**       | Users send any file directly to the bot in a Telegram chat — no external app required               |
+| ⚡ **FastAPI Backend**             | A dedicated Python/FastAPI service handles Google OAuth, file uploads, and data persistence         |
+| 🔑 **Google OAuth 2.0 Flow**      | Users securely link their own Google account via a standard OAuth authorization + callback flow      |
+| ☁️ **Direct Google Drive Upload** | Files are streamed straight to the authenticated user's Google Drive                                 |
+| 🗄️ **MongoDB Persistence**       | User sessions and OAuth tokens are stored and retrieved via MongoDB                                  |
+| 🔐 **HMAC-Secured Requests**      | A shared `BOT_HMAC_SECRET` signs requests between the Bot and Backend to prevent tampering            |
+| 📏 **Customizable Upload Limit**  | Max file size (`UPLOAD_LENGTH`) and upload timeout (`UPLOAD_TIME`) are configurable from `.env`       |
+| 🧩 **Fully Decoupled Services**   | The Bot and Backend are independent Python services, each with their own venv and dependencies       |
+
 ---
- 
+
 ## 🏗️ Architecture & Workflow
- 
+
 [#️-architecture--workflow](#️-architecture--workflow)
- 
-The project is split into three independent components that communicate over HTTP:
- 
+
+The project is split into **two independent Python services** that communicate over HTTP, secured with an HMAC signature:
+
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                      SYSTEM ARCHITECTURE OVERVIEW                   │
-└─────────────────────────────────────────────────────────────────────┘
- 
-  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-  │              │     │              │     │              │     │              │
-  │   Frontend   │ ──► │  Telegram    │ ──► │   Backend    │ ──► │   Google     │
-  │              │     │  Bot         │     │  (FastAPI)   │     │   Drive API  │
-  │  Dashboard / │     │              │     │              │     │              │
-  │  status view │     │  Listens for │     │  Validates,  │     │  Stores the  │
-  │  for uploads │     │  incoming    │     │  enforces    │     │  uploaded    │
-  │              │     │  files from  │     │  size limit, │     │  file in the │
-  │              │     │  users       │     │  streams     │     │  target      │
-  │              │     │              │     │  upload      │     │  folder      │
-  └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
- 
-     COMPONENT 1          COMPONENT 2           COMPONENT 3          DESTINATION
-     FRONTEND              TELEGRAM BOT          BACKEND (API)        GOOGLE DRIVE
+┌───────────────────────────────────────────────────────────────────────────┐
+│                         SYSTEM ARCHITECTURE OVERVIEW                      │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  ┌────────────────────┐    HMAC-signed    ┌────────────────────┐    OAuth /   ┌──────────────┐
+  │                     │     requests      │                    │    Upload    │              │
+  │   Bot (Frontend)    │ ────────────────► │      Backend       │ ───────────► │  Google Drive│
+  │                     │                   │      (FastAPI)     │              │      API     │
+  │  Listens for chats, │ ◄──────────────── │                    │ ◄─────────── │              │
+  │  forwards files to  │     responses     │  Handles Google    │   tokens /   └──────────────┘
+  │  the Backend        │                   │  OAuth, uploads,   │   status
+  │                     │                   │  and MongoDB       │              ┌──────────────┐
+  │  python main.py     │                   │  persistence       │ ───────────► │   MongoDB    │
+  │                     │                   │                    │              │              │
+  │                     │                   │  uvicorn main:app  │ ◄─────────── │  User + token│
+  └────────────────────┘                   └────────────────────┘              │  storage     │
+                                                                                 └──────────────┘
+
+        SERVICE 1                                  SERVICE 2                        STORAGE
+        bot/ folder                                backend/ folder
 ```
- 
-Each component is designed to run and deploy **independently** — the Bot forwards file events to the Backend over its API, and the Backend is the only component that talks to Google Drive directly.
- 
+
+Each service lives in its own folder, ships its own `requirements.txt` and `.env.example`, and is meant to be **forked, deployed, and run independently**.
+
 ---
- 
+
 ## 🛠️ Tech Stack
- 
+
 [#️-tech-stack](#️-tech-stack)
- 
-- **Core Language** — Python
-- **Backend Framework** — FastAPI
-- **Bot Framework** — Telegram Bot API
-- **Storage** — Google Drive API
+
+- **Core Language** — Python (no Node.js/JavaScript involved anywhere in the stack)
+- **Bot Service** — Telegram Bot API, run via `python main.py`
+- **Backend Service** — FastAPI, run via `uvicorn main:app`
+- **Authentication** — Google OAuth 2.0
+- **Storage** — Google Drive API (files) + MongoDB (users/tokens)
 - **Config Management** — python-dotenv
-- **Frontend** — Standalone client (deployed separately from the Bot/Backend)
+
 ---
- 
+
 ## 📦 Dependencies
- 
+
 [#-dependencies](#-dependencies)
- 
-All required Python packages are listed in `requirements.txt`. Install them with:
- 
+
+Each service manages its **own** `requirements.txt`. Install them separately from inside each folder:
+
 ```bash
+# Inside bot/
+pip install -r requirements.txt
+
+# Inside backend/
 pip install -r requirements.txt
 ```
- 
-| Package                   | Role                                                              |
-| -------------------------- | ------------------------------------------------------------------ |
-| `fastapi`                 | Powers the backend API that receives and routes upload requests    |
-| `uvicorn`                 | ASGI server used to run the FastAPI backend                        |
-| `python-telegram-bot`     | Handles the Telegram bot's message and file-event listeners        |
-| `google-api-python-client`| Talks to the Google Drive API to perform the file upload           |
-| `google-auth-oauthlib`    | Manages Google OAuth2 authentication for Drive access              |
-| `python-dotenv`           | Loads all credentials and configuration securely from the `.env` file |
-| `requests`                | Handles HTTP calls between the Bot and Backend components          |
- 
-> **Note:** If your `bot/` and `backend/` components ship separate `requirements.txt` files, run the install command inside each component's directory.
- 
+
+| Package                    | Used In    | Role                                                                 |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- |
+| `fastapi`                  | backend    | Powers the API that handles OAuth, uploads, and session routes          |
+| `uvicorn`                  | backend    | ASGI server used to run the FastAPI backend                             |
+| `pymongo`                  | backend    | Connects to MongoDB to persist user sessions and OAuth tokens           |
+| `google-auth`              | backend    | Verifies and refreshes Google OAuth tokens                              |
+| `requests`                 | bot, backend | Handles HTTP calls, including OAuth token exchange and inter-service calls |
+| `python-telegram-bot`      | bot        | Listens for and handles incoming Telegram messages and files            |
+| `python-dotenv`            | bot, backend | Loads credentials and configuration securely from each `.env` file      |
+
+> Package names above reflect the typical role each library plays — check each folder's own `requirements.txt` for the exact pinned versions.
+
 ---
- 
+
 ## 🚀 Installation & Setup
- 
+
 [#-installation--setup](#-installation--setup)
- 
+
 ### 1️⃣ Fork the Repository
- 
+
 [#1️⃣-fork-the-repository](#1️⃣-fork-the-repository)
- 
-Start by forking this repository to your own GitHub account using the **Fork** button at the top of the page, then clone your fork locally:
- 
+
+Fork this repository to your own GitHub account using the **Fork** button at the top of the page, then clone your fork locally:
+
 ```bash
 git clone https://github.com/<your-username>/Google-Drive-Upload-Telegram-Bot.git
 cd Google-Drive-Upload-Telegram-Bot
 ```
- 
-### 2️⃣ Create and Activate a Virtual Environment
- 
-[#2️⃣-create-and-activate-a-virtual-environment](#2️⃣-create-and-activate-a-virtual-environment)
- 
+
+### 2️⃣ Split the Project into Two Services
+
+[#2️⃣-split-the-project-into-two-services](#2️⃣-split-the-project-into-two-services)
+
+This project is designed to run as **two separate services**, not a single monolith:
+
+- **`backend/`** — the Bot Backend (FastAPI + Google OAuth + MongoDB)
+- **`bot/`** — the Bot Frontend (the Telegram-facing bot service)
+
+Deploy each folder as its own repository/service (e.g., push each to its own host or container), so they can be scaled, restarted, and updated independently of one another.
+
+### 3️⃣ Set Up the Backend
+
+[#3️⃣-set-up-the-backend](#3️⃣-set-up-the-backend)
+
 ```bash
-# Create the virtual environment
-python -m venv bot-venv
- 
-# Activate — macOS/Linux:
-source bot-venv/bin/activate
- 
-# Activate — Windows:
-.\bot-venv\Scripts\activate
-```
- 
-> ⚠️ **Do not commit `bot-venv/` to your repository.** It is a local dependency folder, not project source code — make sure it's listed in your `.gitignore` before pushing any changes.
- 
-### 3️⃣ Install Dependencies
- 
-[#3️⃣-install-dependencies](#3️⃣-install-dependencies)
- 
-```bash
+cd backend
+
+# Create and activate a dedicated virtual environment
+python -m venv venv
+source venv/bin/activate      # macOS/Linux
+.\venv\Scripts\activate       # Windows
+
+# Install backend dependencies
 pip install -r requirements.txt
-```
- 
-### 4️⃣ Configure Environment Variables
- 
-[#4️⃣-configure-environment-variables](#4️⃣-configure-environment-variables)
- 
-Copy the example environment file and fill in your own credentials:
- 
-```bash
+
+# Configure environment variables
 cp .env.example .env
 ```
- 
-Then open `.env` and replace each placeholder with your real values (see the **Environment Variables** section below for the full reference).
- 
-### 5️⃣ Separate the Components for Deployment
- 
-[#5️⃣-separate-the-components-for-deployment](#5️⃣-separate-the-components-for-deployment)
- 
-The **Frontend**, **Telegram Bot**, and **Backend** are built to be deployed as independent services rather than a single monolith. Before deploying:
- 
-- Move or point each component (`frontend/`, `bot/`, `backend/`) to its own deployment target (e.g., separate services, containers, or hosting platforms)
-- Make sure each component has its own environment configuration pointing to the correct URLs of the others
-- From the `frontend/` directory, run the standard build command to generate the production build:
+
+Open `backend/.env` and fill in your Google OAuth, MongoDB, and Telegram credentials (see **Environment Variables** below).
+
+Run the backend:
+
 ```bash
-npm install
-npm run build
-```
- 
-### 6️⃣ Run the Bot and Backend
- 
-[#6️⃣-run-the-bot-and-backend](#6️⃣-run-the-bot-and-backend)
- 
-```bash
-# Start the FastAPI backend
-cd backend
 uvicorn main:app --reload
- 
-# In a separate terminal, start the Telegram bot
+```
+
+### 4️⃣ Set Up the Bot (Frontend)
+
+[#4️⃣-set-up-the-bot-frontend](#4️⃣-set-up-the-bot-frontend)
+
+```bash
 cd bot
-python bot.py
+
+# Create and activate a separate virtual environment
+python -m venv venv
+source venv/bin/activate      # macOS/Linux
+.\venv\Scripts\activate       # Windows
+
+# Install bot dependencies
+pip install -r requirements.txt
+
+# Configure environment variables
+cp .env.example .env
 ```
- 
-Once both are running, send a file to your bot on Telegram — it will be validated against your configured upload limit and uploaded straight to Google Drive.
- 
+
+Open `bot/.env` and fill in your Telegram bot token, HMAC secret, and backend URL (see **Environment Variables** below).
+
+Run the bot:
+
+```bash
+python main.py
+```
+
+Once both services are running, send a file to your bot on Telegram — it will authenticate the request, check it against your configured upload limit, and upload it to Google Drive.
+
 ---
- 
+
 ## 🔑 Environment Variables
- 
+
 [#-environment-variables](#-environment-variables)
- 
-Create a `.env` file in the project root using the structure below. A template is provided as `.env.example`.
- 
+
+Each service has its **own** `.env`, created from its own `.env.example`. Keep the two separate — never merge them into one file.
+
+### `bot/.env.example` — Bot (Frontend)
+
+[#botenvexample--bot-frontend](#botenvexample--bot-frontend)
+
 ```env
-# ─────────────────────────────────────────
-# Telegram Bot
-# ─────────────────────────────────────────
-TELEGRAM_BOT_TOKEN = YOUR_TELEGRAM_BOT_TOKEN
- 
-# ─────────────────────────────────────────
-# FastAPI Backend
-# ─────────────────────────────────────────
-BACKEND_HOST = 0.0.0.0
-BACKEND_PORT = 8000
-BACKEND_URL  = http://localhost:8000
- 
-# ─────────────────────────────────────────
-# Google Drive API
-# ─────────────────────────────────────────
-GOOGLE_CLIENT_ID       = YOUR_GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET   = YOUR_GOOGLE_CLIENT_SECRET
-GOOGLE_REFRESH_TOKEN   = YOUR_GOOGLE_REFRESH_TOKEN
-GOOGLE_DRIVE_FOLDER_ID = YOUR_TARGET_FOLDER_ID
- 
-# ─────────────────────────────────────────
-# Upload Settings
-# ─────────────────────────────────────────
-# Maximum file size accepted by the bot, in megabytes.
-# Adjust this value freely to raise or lower the upload limit.
-MAX_FILE_SIZE_MB = 50
+# Telegram Bot Configuration
+BOT_TOKEN=your_telegram_bot_token_here
+BOT_HMAC_SECRET=your_bot_hmac_secret_here
+
+# Backend Service Configuration
+BACKEND_URL=http://127.0.0.1:8000
+
+# File Upload Settings
+UPLOAD_LENGTH=1      # Max upload limit in MB
+UPLOAD_TIME=300      # Upload request timeout in seconds
 ```
- 
+
+### `backend/.env.example` — Backend
+
+[#backendenvexample--backend](#backendenvexample--backend)
+
+```env
+# Google OAuth Configuration
+GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_google_client_secret_here
+GOOGLE_REDIRECT_URI={YOUR_BACKEND_URL}/google/callback
+
+# Google OAuth Endpoints
+TOKEN_URL=https://oauth2.googleapis.com/token
+USER_INFO_URL=https://www.googleapis.com/oauth2/v2/userinfo
+ACCESS_TOKEN_URL=https://oauth2.googleapis.com/token
+GOOGLE_AUTH_URL=https://accounts.google.com/o/oauth2/v2/auth
+
+# Database Configuration
+MONGO_URI=your_mongodb_uri_here
+
+# Telegram Bot Configuration
+BOT_TOKEN=your_telegram_bot_token_here
+BOT_HMAC_SECRET=your_bot_hmac_secret_here
+```
+
 ### Where to obtain each credential:
- 
+
 [#where-to-obtain-each-credential](#where-to-obtain-each-credential)
- 
-| Variable                                    | Source                                                                                       |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `TELEGRAM_BOT_TOKEN`                        | [@BotFather](https://t.me/BotFather) on Telegram                                              |
-| `GOOGLE_CLIENT_ID` + `GOOGLE_CLIENT_SECRET` | [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials      |
-| `GOOGLE_REFRESH_TOKEN`                      | Generated via the Google OAuth2 consent flow for your Drive API credentials                    |
-| `GOOGLE_DRIVE_FOLDER_ID`                    | The folder ID from your target Google Drive folder's URL                                       |
-| `MAX_FILE_SIZE_MB`                          | Set by you — this directly controls the largest file the bot will accept                       |
- 
+
+| Variable                                          | Source                                                                                  |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `BOT_TOKEN`                                        | [@BotFather](https://t.me/BotFather) on Telegram                                            |
+| `BOT_HMAC_SECRET`                                  | Self-generated secret (e.g. `openssl rand -hex 32`) — **must match exactly** in both `.env` files |
+| `BACKEND_URL`                                      | The URL where your `backend/` service is running or deployed                                |
+| `UPLOAD_LENGTH` / `UPLOAD_TIME`                    | Set by you — controls the max file size (MB) and upload timeout (seconds) the bot accepts   |
+| `GOOGLE_CLIENT_ID` + `GOOGLE_CLIENT_SECRET`       | [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials    |
+| `GOOGLE_REDIRECT_URI`                              | Your deployed backend URL + `/google/callback`                                              |
+| `TOKEN_URL` / `USER_INFO_URL` / `ACCESS_TOKEN_URL` / `GOOGLE_AUTH_URL` | Fixed Google OAuth 2.0 endpoints — use the defaults shown above                |
+| `MONGO_URI`                                        | [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or your own self-hosted MongoDB instance |
+
 ---
- 
+
 ## 📋 Guidelines
- 
+
 [#-guidelines](#-guidelines)
- 
+
 Warning
- 
+
 **Keep these in mind before you deploy or contribute**
- 
+
 - **Fork before you build.** Always work from your own fork so your credentials and changes stay isolated from the upstream repository.
-- **Never push `bot-venv/` to your repository.** It's a local virtual environment folder full of installed packages, not project code — confirm it's listed in `.gitignore` before every commit and push.
-- **Deploy components separately.** The Frontend, Telegram Bot, and Backend are decoupled by design. Deploy each one to its own host/service and run the standard build command (e.g., `npm run build`) for the Frontend before shipping it.
-- **Tune the upload limit to your use case.** The `MAX_FILE_SIZE_MB` variable in `.env` controls the maximum file size the bot will accept — raise or lower it based on your Google Drive quota and hosting constraints.
-- **Never hardcode secrets.** All tokens and API keys belong in `.env`, which should always be excluded from version control via `.gitignore`.
-- **Install dependencies per component.** Run `pip install -r requirements.txt` inside whichever component (bot or backend) you're actively working on or deploying.
+- **Treat `bot/` and `backend/` as two separate services.** Each has its own virtual environment, its own `requirements.txt`, and its own `.env` — don't merge them or share a single venv between the two.
+- **Never push either virtual environment folder to your repository.** Confirm `venv/` (or however you name it) is listed in `.gitignore` in **both** `bot/` and `backend/` before every commit and push.
+- **Keep `BOT_HMAC_SECRET` identical across both services.** The Bot signs requests with this secret and the Backend verifies them — a mismatch will cause every request to be rejected.
+- **Tune the upload limit and timeout to your use case.** `UPLOAD_LENGTH` (MB) and `UPLOAD_TIME` (seconds) in `bot/.env` control what the bot will accept — adjust based on your Google Drive quota and hosting constraints.
+- **Never hardcode secrets.** All tokens, OAuth credentials, and the MongoDB URI belong in `.env`, which should always be excluded from version control via `.gitignore`.
+- **This is a pure Python stack.** There is no Node.js, npm, or frontend build step anywhere in this project — both services are started directly with Python (`uvicorn main:app` for the backend, `python main.py` for the bot).
+
 ---
- 
+
 ## 📁 Project Structure
- 
+
 [#-project-structure](#-project-structure)
- 
+
 ```
 Google-Drive-Upload-Telegram-Bot/
-├── frontend/             # 🖥️  Standalone client, deployed independently
-├── bot/                  # 🤖 Telegram bot service (listens for file events)
-├── backend/              # ⚡ FastAPI service (validates & uploads to Drive)
-├── .env.example          # 🔑 Safe environment variable template (no real keys)
-├── .env                  # 🔒 Your actual credentials (git-ignored)
-├── bot-venv/              # 🚫 Local virtual environment (git-ignored, never pushed)
-├── requirements.txt       # 📦 Python dependencies
-└── README.md              # 📄 Project documentation
+├── backend/                # ⚡ FastAPI service — Google OAuth, uploads, MongoDB
+│   ├── main.py              # Entry point — run via `uvicorn main:app`
+│   ├── venv/                 # 🚫 Local virtual environment (git-ignored, never pushed)
+│   ├── .env.example          # 🔑 Safe environment variable template (no real keys)
+│   ├── .env                  # 🔒 Your actual backend credentials (git-ignored)
+│   └── requirements.txt      # 📦 Backend-only Python dependencies
+├── bot/                     # 🤖 Telegram bot service (frontend)
+│   ├── main.py               # Entry point — run via `python main.py`
+│   ├── venv/                  # 🚫 Local virtual environment (git-ignored, never pushed)
+│   ├── .env.example           # 🔑 Safe environment variable template (no real keys)
+│   ├── .env                   # 🔒 Your actual bot credentials (git-ignored)
+│   └── requirements.txt       # 📦 Bot-only Python dependencies
+├── .gitignore
+└── README.md                # 📄 Project documentation
 ```
- 
+
 ---
- 
+
 ## 🗺️ Roadmap
- 
+
 [#️-roadmap](#️-roadmap)
- 
-- [ ] 📊 Upload progress and history dashboard in the Frontend
+
 - [ ] 🗂️ Support for uploading directly into user-selected Drive subfolders
 - [ ] 🔁 Retry logic for failed or interrupted uploads
-- [ ] 👥 Multi-user access control for shared bot deployments
-- [ ] 🐳 Docker Compose setup for one-command local deployment
+- [ ] 👥 Multi-user session management via MongoDB
+- [ ] 📊 Upload history and status command inside the Telegram bot
+- [ ] 🐳 Docker Compose setup to run both services with one command
+
 ---
- 
+
 ## 📄 License
- 
+
 [#-license](#-license)
- 
+
 This project is licensed under the **MIT License** — see the [LICENSE](https://github.com/dhashwinkennedy/Google-Drive-Upload-Telegram-Bot/blob/main/LICENSE) file for details.
- 
+
 ---
- 
-Built with 🤖 Telegram Bot API · ⚡ FastAPI · ☁️ Google Drive API
- 
+
+Built with 🤖 Telegram Bot API · ⚡ FastAPI · 🔑 Google OAuth · 🗄️ MongoDB
+
 *From a chat message to a Drive file — fully automated.*
- 
