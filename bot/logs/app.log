@@ -1,0 +1,81 @@
+2026-07-19 16:03:33,824 | INFO | gdrive_bot | User 8760569488 used /start
+2026-07-19 16:03:34,969 | INFO | gdrive_bot | /start completed for user 8760569488
+2026-07-19 16:04:14,220 | INFO | gdrive_bot | User 8760569488 used /help
+2026-07-19 16:04:15,071 | INFO | gdrive_bot | /help completed for user 8760569488
+2026-07-19 16:04:19,816 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:04:21,137 | INFO | gdrive_bot | Loaded 1 account(s) for user 8760569488
+2026-07-19 16:04:31,117 | INFO | gdrive_bot | Clearing pending actions for user 8760569488
+2026-07-19 16:04:32,065 | INFO | gdrive_bot | User 8760569488 initiated /connect
+2026-07-19 16:04:32,503 | INFO | gdrive_bot | Connect link sent to user 8760569488
+2026-07-19 16:05:56,021 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:05:56,128 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:05:58,543 | INFO | gdrive_bot | User 8760569488 opened account dhashwinkennedy2008@gmail.com
+2026-07-19 16:05:58,649 | INFO | gdrive_bot | Displayed account details for dhashwinkennedy2008@gmail.com (user 8760569488)
+2026-07-19 16:06:00,846 | INFO | gdrive_bot | User 8760569488 started folder change for dhashwinkennedy2008@gmail.com
+2026-07-19 16:15:19,748 | INFO | gdrive_bot | User 8760569488 initiated /connect
+2026-07-19 16:15:20,164 | INFO | gdrive_bot | Connect link sent to user 8760569488
+2026-07-19 16:15:22,603 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:15:23,906 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:15:25,942 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:15:26,046 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:15:28,088 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:16:24,807 | INFO | gdrive_bot | User 8760569488 submitted folder 'pho' for mrmadyt2008@gmail.com
+2026-07-19 16:16:28,253 | WARNING | gdrive_bot | Folder update rejected (500) for user 8760569488 (mrmadyt2008@gmail.com): {'status': 'error', 'code': 500, 'error_type': 'INTERNAL_SERVER_ERROR', 'message': 'An unexpected server-side error occurred while processing your request.'}
+2026-07-19 16:16:39,514 | INFO | gdrive_bot | Clearing pending actions for user 8760569488
+2026-07-19 16:16:40,509 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:16:40,602 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:16:42,758 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:16:42,845 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:16:44,768 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:17:03,282 | INFO | gdrive_bot | User 8760569488 submitted folder 'hlo' for mrmadyt2008@gmail.com
+2026-07-19 16:17:06,637 | WARNING | gdrive_bot | Folder update rejected (500) for user 8760569488 (mrmadyt2008@gmail.com): {'status': 'error', 'code': 500, 'error_type': 'INTERNAL_SERVER_ERROR', 'message': 'An unexpected server-side error occurred while processing your request.'}
+2026-07-19 16:17:18,030 | INFO | gdrive_bot | User 8760569488 submitted folder './photos' for mrmadyt2008@gmail.com
+2026-07-19 16:17:21,431 | WARNING | gdrive_bot | Folder update rejected (500) for user 8760569488 (mrmadyt2008@gmail.com): {'status': 'error', 'code': 500, 'error_type': 'INTERNAL_SERVER_ERROR', 'message': 'An unexpected server-side error occurred while processing your request.'}
+2026-07-19 16:17:45,089 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:17:45,194 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:17:47,162 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:17:47,241 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:17:49,603 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:17:51,275 | INFO | gdrive_bot | User 8760569488 submitted folder 'hlo' for mrmadyt2008@gmail.com
+2026-07-19 16:17:54,119 | WARNING | gdrive_bot | Folder update rejected (500) for user 8760569488 (mrmadyt2008@gmail.com): {'status': 'error', 'code': 500, 'error_type': 'INTERNAL_SERVER_ERROR', 'message': 'An unexpected server-side error occurred while processing your request.'}
+2026-07-19 16:20:27,067 | INFO | gdrive_bot | Clearing pending actions for user 8760569488
+2026-07-19 16:20:27,951 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:20:29,243 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:20:31,557 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:20:31,642 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:20:34,329 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:20:35,823 | INFO | gdrive_bot | User 8760569488 submitted folder 'hlo' for mrmadyt2008@gmail.com
+2026-07-19 16:20:38,623 | WARNING | gdrive_bot | Folder update rejected (500) for user 8760569488 (mrmadyt2008@gmail.com): {'status': 'error', 'code': 500, 'error_type': 'INTERNAL_SERVER_ERROR', 'message': 'An unexpected server-side error occurred while processing your request.'}
+2026-07-19 16:29:27,773 | INFO | gdrive_bot | Clearing pending actions for user 8760569488
+2026-07-19 16:29:29,005 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:29:30,393 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:29:32,464 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:29:32,553 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:29:34,474 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:29:36,312 | INFO | gdrive_bot | User 8760569488 submitted folder 'hlo' for mrmadyt2008@gmail.com
+2026-07-19 16:29:37,817 | WARNING | gdrive_bot | Folder update rejected (400) for user 8760569488 (mrmadyt2008@gmail.com): Folder path must start with './'
+2026-07-19 16:30:10,971 | INFO | gdrive_bot | User 8760569488 submitted folder 'klo' for mrmadyt2008@gmail.com
+2026-07-19 16:30:13,063 | WARNING | gdrive_bot | Folder update rejected (400) for user 8760569488 (mrmadyt2008@gmail.com): Folder path must start with './'
+2026-07-19 16:30:23,418 | INFO | gdrive_bot | User 8760569488 submitted folder './pjo' for mrmadyt2008@gmail.com
+2026-07-19 16:30:27,730 | INFO | gdrive_bot | Folder updated for user 8760569488 (mrmadyt2008@gmail.com) -> ./pjo
+2026-07-19 16:30:34,829 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:30:34,935 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:30:37,589 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:30:37,711 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:30:39,767 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:39:33,218 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:39:33,449 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:39:35,410 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:39:35,506 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:39:37,209 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:41:13,289 | WARNING | gdrive_bot | User 8760569488 attempted Unknown command '/ko'
+2026-07-19 16:41:17,064 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:41:17,163 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:41:19,584 | INFO | gdrive_bot | User 8760569488 opened account mrmadyt2008@gmail.com
+2026-07-19 16:41:19,690 | INFO | gdrive_bot | Displayed account details for mrmadyt2008@gmail.com (user 8760569488)
+2026-07-19 16:41:23,234 | INFO | gdrive_bot | User 8760569488 started folder change for mrmadyt2008@gmail.com
+2026-07-19 16:41:26,258 | WARNING | gdrive_bot | User 8760569488 attempted command '/pho' while entering destination folder
+2026-07-19 16:41:26,258 | WARNING | gdrive_bot | User 8760569488 attempted Unknown command '/pho' while entering destination folder
+2026-07-19 16:41:32,413 | INFO | gdrive_bot | Clearing pending actions for user 8760569488
+2026-07-19 16:41:33,523 | INFO | gdrive_bot | User 8760569488 used /manage
+2026-07-19 16:41:33,630 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488

@@ -1,0 +1,244 @@
+2026-07-19 16:04:19,878 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:04:19,878 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:04:19,878 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:04:21,131 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:04:21,132 | INFO | gdrive_bot | Loaded 1 account(s) for user 8760569488
+2026-07-19 16:04:21,132 | INFO | gdrive_bot | [GET /manage] Returned 1 account(s) for user 8760569488
+2026-07-19 16:04:37,953 | INFO | gdrive_bot | [GET /login] Google login requested by user 8760569488
+2026-07-19 16:05:29,191 | INFO | gdrive_bot | [GET /login] Google login requested by user 8760569488
+2026-07-19 16:05:41,856 | INFO | gdrive_bot | [GET /callback] Received Google OAuth callback 
+2026-07-19 16:05:41,856 | INFO | gdrive_bot | Exchanging authorization code for Google tokens
+2026-07-19 16:05:42,693 | INFO | gdrive_bot | Successfully exchanged authorization code
+2026-07-19 16:05:43,490 | INFO | gdrive_bot | Fetched Google profile for dhashwinkennedy2008@gmail.com
+2026-07-19 16:05:43,491 | INFO | gdrive_bot | [GET /callback] Connection callback for user 8760569488
+2026-07-19 16:05:43,492 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:05:44,788 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:05:44,788 | INFO | gdrive_bot | [GET /callback] Adding additional Google account dhashwinkennedy2008@gmail.com for user 8760569488
+2026-07-19 16:05:44,788 | INFO | gdrive_bot | Adding Google account dhashwinkennedy2008@gmail.com to user 8760569488
+2026-07-19 16:05:44,788 | INFO | gdrive_bot | Resolving Drive folder path './gdrive_bot'
+2026-07-19 16:05:46,056 | INFO | gdrive_bot | Found existing folder 'gdrive_bot'
+2026-07-19 16:05:46,056 | INFO | gdrive_bot | Resolved folder './gdrive_bot' -> 1GqazeAGu0PEzDR-_LkanUrABib0qTnOP
+2026-07-19 16:05:46,160 | INFO | gdrive_bot | Successfully added Google account dhashwinkennedy2008@gmail.com to user 8760569488
+2026-07-19 16:05:46,160 | INFO | gdrive_bot | [GET /callback] Google account connected successfully for user 8760569488 (dhashwinkennedy2008@gmail.com)
+2026-07-19 16:05:46,160 | INFO | gdrive_bot | Sending Telegram completion message to user 8760569488
+2026-07-19 16:05:46,160 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:05:47,532 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:05:47,533 | INFO | gdrive_bot | Telegram message delivered to user 8760569488
+2026-07-19 16:05:56,046 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:05:56,046 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:05:56,047 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:05:56,126 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:05:56,126 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:05:56,127 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:05:58,570 | INFO | gdrive_bot | [GET /manage] Account details requested for dhashwinkennedy2008@gmail.com by user 8760569488
+2026-07-19 16:05:58,570 | INFO | gdrive_bot | Loading account dhashwinkennedy2008@gmail.com for user 8760569488
+2026-07-19 16:05:58,571 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:05:58,646 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:05:58,646 | INFO | gdrive_bot | Loaded account dhashwinkennedy2008@gmail.com for user 8760569488
+2026-07-19 16:05:58,647 | INFO | gdrive_bot | [GET /manage] Returned account details for dhashwinkennedy2008@gmail.com
+2026-07-19 16:15:22,625 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:15:22,627 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:15:22,627 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:15:23,903 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:15:23,904 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:15:23,904 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:15:25,964 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:15:25,965 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:15:25,965 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:15:26,042 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:15:26,043 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:15:26,043 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:16:25,829 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> pho
+2026-07-19 16:16:25,830 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> pho
+2026-07-19 16:16:25,830 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:16:25,903 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:16:26,783 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:16:26,785 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:16:26,879 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:16:26,879 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:16:26,879 | ERROR | gdrive_bot | Internal server exception (chat_id=8760569488)
+2026-07-19 16:16:26,879 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:16:28,250 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:16:28,252 | INFO | gdrive_bot | Server error message sent to Telegram user 8760569488
+2026-07-19 16:16:40,527 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:16:40,527 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:16:40,527 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:16:40,600 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:16:40,600 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:16:40,600 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:16:42,761 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:16:42,762 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:16:42,762 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:16:42,842 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:16:42,843 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:16:42,843 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:17:04,253 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:17:04,253 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:17:04,253 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:04,350 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:17:05,147 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:17:05,150 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:05,234 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:17:05,234 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:17:05,234 | ERROR | gdrive_bot | Internal server exception (chat_id=8760569488)
+2026-07-19 16:17:05,234 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:17:06,634 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:17:06,636 | INFO | gdrive_bot | Server error message sent to Telegram user 8760569488
+2026-07-19 16:17:18,958 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> ./photos
+2026-07-19 16:17:18,958 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> ./photos
+2026-07-19 16:17:18,959 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:19,038 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:17:19,821 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:17:19,822 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:19,908 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:17:19,909 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:17:19,909 | ERROR | gdrive_bot | Internal server exception (chat_id=8760569488)
+2026-07-19 16:17:19,909 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:17:21,428 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:17:21,430 | INFO | gdrive_bot | Server error message sent to Telegram user 8760569488
+2026-07-19 16:17:45,107 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:17:45,108 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:17:45,108 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:17:45,192 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:17:45,192 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:17:45,192 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:17:47,166 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:17:47,167 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:17:47,168 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:17:47,239 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:17:47,239 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:17:47,239 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:17:51,710 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:17:51,710 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:17:51,710 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:51,790 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:17:52,592 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:17:52,593 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:17:52,668 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:17:52,668 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:17:52,668 | ERROR | gdrive_bot | Internal server exception (chat_id=8760569488)
+2026-07-19 16:17:52,669 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:17:54,116 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:17:54,118 | INFO | gdrive_bot | Server error message sent to Telegram user 8760569488
+2026-07-19 16:20:27,977 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:20:27,978 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:20:27,978 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:20:29,241 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:20:29,242 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:20:29,242 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:20:31,562 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:20:31,562 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:20:31,563 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:20:31,637 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:20:31,638 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:20:31,639 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:20:36,248 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:20:36,248 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:20:36,248 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:20:36,336 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:20:37,198 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:20:37,199 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:20:37,291 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:20:37,291 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:20:37,291 | ERROR | gdrive_bot | Internal server exception (chat_id=8760569488)
+2026-07-19 16:20:37,292 | INFO | gdrive_bot | Sending Telegram message to user 8760569488
+2026-07-19 16:20:38,620 | INFO | gdrive_bot | Telegram message sent successfully to user 8760569488
+2026-07-19 16:20:38,622 | INFO | gdrive_bot | Server error message sent to Telegram user 8760569488
+2026-07-19 16:29:29,033 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:29:29,034 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:29:29,034 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:29:30,390 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:29:30,390 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:29:30,391 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:29:32,479 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:29:32,480 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:29:32,480 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:29:32,550 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:29:32,550 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:29:32,550 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:29:36,770 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:29:36,771 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> hlo
+2026-07-19 16:29:36,771 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:29:36,844 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:29:37,724 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:29:37,728 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:29:37,816 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:29:37,816 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:29:37,816 | INFO | gdrive_bot | Resolving Drive folder path 'hlo'
+2026-07-19 16:29:37,816 | WARNING | gdrive_bot | Invalid folder path received from user 8760569488: hlo
+2026-07-19 16:30:12,048 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> klo
+2026-07-19 16:30:12,048 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> klo
+2026-07-19 16:30:12,048 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:12,130 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:30:12,977 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:30:12,978 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:13,061 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:30:13,061 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:30:13,061 | INFO | gdrive_bot | Resolving Drive folder path 'klo'
+2026-07-19 16:30:13,061 | WARNING | gdrive_bot | Invalid folder path received from user 8760569488: klo
+2026-07-19 16:30:24,400 | INFO | gdrive_bot | [PATCH /manage/folder] Folder update requested by user 8760569488 (mrmadyt2008@gmail.com) -> ./pjo
+2026-07-19 16:30:24,400 | INFO | gdrive_bot | Changing target folder for user 8760569488 (mrmadyt2008@gmail.com) -> ./pjo
+2026-07-19 16:30:24,400 | INFO | gdrive_bot | Retrieving valid access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:24,477 | INFO | gdrive_bot | Refreshing Google access token
+2026-07-19 16:30:25,445 | INFO | gdrive_bot | Google access token refreshed successfully
+2026-07-19 16:30:25,446 | INFO | gdrive_bot | Updating access token for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:25,521 | INFO | gdrive_bot | Stored refreshed access token for mrmadyt2008@gmail.com
+2026-07-19 16:30:25,522 | INFO | gdrive_bot | Access token updated for mrmadyt2008@gmail.com
+2026-07-19 16:30:25,522 | INFO | gdrive_bot | Resolving Drive folder path './pjo'
+2026-07-19 16:30:26,736 | INFO | gdrive_bot | Creating Google Drive folder 'pjo'
+2026-07-19 16:30:27,655 | INFO | gdrive_bot | Created folder 'pjo' (ID: 1_jco_aELNgOptBX86HzOxJr16GtVu-eJ)
+2026-07-19 16:30:27,656 | INFO | gdrive_bot | Resolved folder './pjo' -> 1_jco_aELNgOptBX86HzOxJr16GtVu-eJ
+2026-07-19 16:30:27,729 | INFO | gdrive_bot | Target folder updated successfully for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:27,729 | INFO | gdrive_bot | [PATCH /manage/folder] Folder updated successfully for user 8760569488 (mrmadyt2008@gmail.com)
+2026-07-19 16:30:34,851 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:30:34,851 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:30:34,852 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:30:34,932 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:30:34,933 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:30:34,933 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:30:37,617 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:30:37,618 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:30:37,618 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:30:37,707 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:30:37,708 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:30:37,708 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:39:33,301 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:39:33,313 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:39:33,314 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:39:33,437 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:39:33,438 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:39:33,438 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:39:35,415 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:39:35,416 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:39:35,416 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:39:35,501 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:39:35,502 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:39:35,502 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:41:17,085 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:41:17,086 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:41:17,086 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:41:17,159 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:41:17,161 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:41:17,161 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 16:41:19,600 | INFO | gdrive_bot | [GET /manage] Account details requested for mrmadyt2008@gmail.com by user 8760569488
+2026-07-19 16:41:19,600 | INFO | gdrive_bot | Loading account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:41:19,601 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:41:19,688 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:41:19,689 | INFO | gdrive_bot | Loaded account mrmadyt2008@gmail.com for user 8760569488
+2026-07-19 16:41:19,689 | INFO | gdrive_bot | [GET /manage] Returned account details for mrmadyt2008@gmail.com
+2026-07-19 16:41:33,549 | INFO | gdrive_bot | [GET /manage] Manage accounts requested by user 8760569488
+2026-07-19 16:41:33,551 | INFO | gdrive_bot | Loading accounts for user 8760569488
+2026-07-19 16:41:33,551 | INFO | gdrive_bot | Loading user 8760569488 from database
+2026-07-19 16:41:33,627 | INFO | gdrive_bot | User 8760569488 found
+2026-07-19 16:41:33,628 | INFO | gdrive_bot | Loaded 2 account(s) for user 8760569488
+2026-07-19 16:41:33,628 | INFO | gdrive_bot | [GET /manage] Returned 2 account(s) for user 8760569488
+2026-07-19 17:12:18,080 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:15:00,025 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:15:09,580 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:16:45,870 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:16:59,973 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:17:56,405 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:18:34,815 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:40:53,023 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:45:56,804 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))
+2026-07-19 17:50:31,781 | INFO | gdrive_bot | Database connected successfully to host: AsyncIOMotorDatabase(Database(MongoClient(host='mongodb+srv://cluster0.3psgylp.mongodb.net', document_class=dict, tz_aware=False, connect=False, retrywrites=True, w='majority', appname='Cluster0', driver=DriverInfo(name='Motor', version='3.7.1', platform='asyncio')), 'host'))

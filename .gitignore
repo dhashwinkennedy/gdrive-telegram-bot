@@ -1,0 +1,23 @@
+# Environment variables and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Python virtual environments
+bot-venv/
+backend-venv
+venv/
+.venv/
+env/
+
+# Python bytecode & caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
