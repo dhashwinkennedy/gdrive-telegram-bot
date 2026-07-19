@@ -278,7 +278,7 @@ Warning
 
 ## 📁 Project Structure
 
-[#-project-structure](#-project-structure)
+[#-project-structure]
 
 ```
 Google-Drive-Upload-Telegram-Bot/
@@ -302,7 +302,7 @@ Google-Drive-Upload-Telegram-Bot/
 
 ## 🗺️ Roadmap
 
-[#️-roadmap](#️-roadmap)
+[#️-roadmap]
 
 - [ ] 🗂️ Support for uploading directly into user-selected Drive subfolders
 - [ ] 🔁 Retry logic for failed or interrupted uploads
@@ -314,7 +314,7 @@ Google-Drive-Upload-Telegram-Bot/
 
 ## 📄 License
 
-[#-license](#-license)
+[#-license]
 
 This project is licensed under the **MIT License** — see the [LICENSE](https://github.com/dhashwinkennedy/Google-Drive-Upload-Telegram-Bot/blob/main/LICENSE) file for details.
 
