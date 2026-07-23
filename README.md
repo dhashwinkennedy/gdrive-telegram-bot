@@ -23,7 +23,6 @@
 **🔗 [Try the live sample bot on Telegram](https://t.me/Gdrive_testbot)** — test the upload flow yourself before setting up your own instance.
 ## ✨ Key Features
 
-[#-key-features]
 
 | Feature                          | Description                                                                                     |
 | --------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -72,7 +71,6 @@ Each service lives in its own folder, ships its own `requirements.txt` and `.env
 
 ## 🛠️ Tech Stack
 
-[#️-tech-stack]
 
 - **Core Language** — Python (no Node.js/JavaScript involved anywhere in the stack)
 - **Bot Service** — Telegram Bot API, run via `python main.py`
@@ -85,7 +83,6 @@ Each service lives in its own folder, ships its own `requirements.txt` and `.env
 
 ## 📦 Dependencies
 
-[#-dependencies]
 
 Each service manages its **own** `requirements.txt`. Install them separately from inside each folder:
 
@@ -113,11 +110,10 @@ pip install -r requirements.txt
 
 ## 🚀 Installation & Setup
 
-[#-installation--setup]
 
 ### 1️⃣ Fork the Repository
 
-[#1️⃣-fork-the-repository]
+
 
 Fork this repository to your own GitHub account using the **Fork** button at the top of the page, then clone your fork locally:
 
@@ -128,8 +124,6 @@ cd Google-Drive-Upload-Telegram-Bot
 
 ### 2️⃣ Split the Project into Two Services
 
-[#2️⃣-split-the-project-into-two-services]
-
 This project is designed to run as **two separate services**, not a single monolith:
 
 - **`backend/`** — the Bot Backend (FastAPI + Google OAuth + MongoDB)
@@ -139,7 +133,6 @@ Deploy each folder as its own repository/service (e.g., push each to its own hos
 
 ### 3️⃣ Set Up the Backend
 
-[#3️⃣-set-up-the-backend]
 
 ```bash
 cd backend
@@ -165,8 +158,6 @@ uvicorn main:app --reload
 ```
 
 ### 4️⃣ Set Up the Bot (Frontend)
-
-[#4️⃣-set-up-the-bot-frontend]
 
 ```bash
 cd bot
@@ -197,13 +188,11 @@ Once both services are running, send a file to your bot on Telegram — it will 
 
 ## 🔑 Environment Variables
 
-[#-environment-variables]
 
 Each service has its **own** `.env`, created from its own `.env.example`. Keep the two separate — never merge them into one file.
 
 ### `bot/.env.example` — Bot (Frontend)
 
-[#botenvexample--bot-frontend]
 
 ```env
 # Telegram Bot Configuration
@@ -220,7 +209,6 @@ UPLOAD_TIME=300      # Upload request timeout in seconds
 
 ### `backend/.env.example` — Backend
 
-[#backendenvexample--backend]
 
 ```env
 # Google OAuth Configuration
@@ -244,7 +232,6 @@ BOT_HMAC_SECRET=your_bot_hmac_secret_here
 
 ### Where to obtain each credential:
 
-[#where-to-obtain-each-credential]
 
 | Variable                                          | Source                                                                                  |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -261,7 +248,6 @@ BOT_HMAC_SECRET=your_bot_hmac_secret_here
 
 ## 📋 Guidelines
 
-[#-guidelines]
 
 Warning
 
@@ -279,7 +265,6 @@ Warning
 
 ## 📁 Project Structure
 
-[#-project-structure]
 
 ```
 Google-Drive-Upload-Telegram-Bot/
@@ -303,7 +288,6 @@ Google-Drive-Upload-Telegram-Bot/
 
 ## 🗺️ Roadmap
 
-[#️-roadmap]
 
 - [ ] 🗂️ Support for uploading directly into user-selected Drive subfolders
 - [ ] 🔁 Retry logic for failed or interrupted uploads
@@ -315,7 +299,6 @@ Google-Drive-Upload-Telegram-Bot/
 
 ## 📄 License
 
-[#-license]
 
 This project is licensed under the **MIT License** — see the [LICENSE](https://github.com/dhashwinkennedy/Google-Drive-Upload-Telegram-Bot/blob/main/LICENSE) file for details.
 
